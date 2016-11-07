@@ -1,22 +1,29 @@
 <template>
-  <div class="hello">
+  <div class="test">
     <h1>{{ msg }}</h1>
     <router-link to="/hello">hello</router-link>
     <h2>Very Cool~ Do you like it ?</h2>
     <h3 @click="searchGithub" style="cursor: pointer;">Click this to test Axios</h3>
+    <h3>{{SLContent}}</h3>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
-  name: 'hello',
+  name: 'test',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App -- test page'
     }
   },
   methods:{
+    ...mapActions([
+      'showLoading',
+      'hideLoading'
+    ]),
     searchGithub: function(){
+      let _this = this;
       this.$http.get('/search/repositories',{
         params: {
           q: 'vscode',
@@ -31,6 +38,11 @@ export default {
         console.log(error);
       });
     }
+  },
+  computed: {
+    ...mapGetters([
+      'SLContent'
+    ])
   }
 }
 </script>

@@ -3,25 +3,26 @@ import {
 	HIDE_POPUP_LOADING
 } from '../../types'
 const state = {
-	message: {
-		content: ''
-	}
+	content: ''
 }
 
 const mutations = {
 	[SHOW_POPUP_LOADING](state, action) {
-		state.message = {
-			...action
-		}
+		state.content = action
 	},
 	[HIDE_POPUP_LOADING](state, action) {
-		state.message = {
-			content: ''
-		}
+		state.content = ''
 	}
+}
+
+const getters = {
+	SLContent: (state, getters) => {
+    return state.content
+  }
 }
 
 export default {
 	state,
-	mutations
+	mutations,
+	getters
 }
