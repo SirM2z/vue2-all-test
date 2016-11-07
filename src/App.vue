@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/images/logo.png">
     <transition
       name="custom-classes-transition"
       enter-active-class="animated tada"
@@ -9,19 +9,30 @@
     >
       <router-view></router-view>
     </transition>
+    <load></load>
   </div>
 </template>
 
 <script>
 require('animate.css')
+require('./assets/style/common.css')
+import 'element-ui/lib/theme-default/icon.css'
+import 'element-ui/lib/theme-default/message.css'
+import 'element-ui/lib/theme-default/notification.css'
+import load from './components/popup/load.vue'
 export default {
   name: 'app',
   components: {
+    load
+  },
+  mounted: function(){
+  },
+  methods: {
   }
 }
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

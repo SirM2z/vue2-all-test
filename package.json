@@ -11,6 +11,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "axios": "^0.15.2",
+    "element-ui": "^1.0.0-rc.8",
     "vue": "^2.0.1",
     "vue-router": "^2.0.1",
     "vuex": "^2.0.0",

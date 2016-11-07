@@ -3,11 +3,14 @@ import Vuex from 'vuex'
 
 import {
 	showLoading,
-	hideLoading
+	hideLoading,
+	showModal,
+	hideModal
 } from './actions/popup'
 
 import {
-	Loading
+	Loading,
+	Modal
 } from './modules/popup'
 
 Vue.use(Vuex)
@@ -15,9 +18,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 	actions: {
 		showLoading,
-		hideLoading
+		hideLoading,
+		showModal,
+		hideModal
 	},
 	modules: {
-		Loading
+		Loading,
+		Modal
 	}
 })

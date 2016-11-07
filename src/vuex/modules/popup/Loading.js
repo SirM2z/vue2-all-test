@@ -16,7 +16,7 @@ const mutations = {
 }
 
 const getters = {
-	SLContent: (state, getters) => {
+	loadContent: (state, getters) => {
     return state.content
   }
 }

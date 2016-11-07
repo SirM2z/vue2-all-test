@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="index">
     <h1>{{ msg }}</h1>
-    <router-link to="/test">test</router-link>
+    <router-link to="/test">go test</router-link>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'hello',
+  name: 'index',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

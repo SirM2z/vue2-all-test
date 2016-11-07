@@ -6,8 +6,22 @@ import router from './routers'
 import store from './vuex/store'
 import { sync } from 'vuex-router-sync'
 import axios from 'axios'
+import * as filters from './filters'
 
 var config = require('../config')
+
+//element-ui按需加载，避免全部引入导致最终包过大
+// message组件引入
+import Message from 'element-ui/lib/message'
+Vue.prototype.$message = Message;
+//
+import Notification from 'element-ui/lib/notification'
+Vue.prototype.$notify = Notification;
+
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 
 //路由跳转之前，判断是否需要验证登录
 // router.beforeEach((to, from, next) => {
