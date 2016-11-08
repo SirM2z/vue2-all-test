@@ -45,25 +45,23 @@ export default {
 		justify-content: center;
 		align-items: center;
 	}
-	/* 必需 */
+	/* .expand-enter 				定义进入的开始状态 
+		 .expand-enter-active 定义进入的结束状态 
+		 .expand-leave 				定义离开的开始状态 
+		 .expand-leave-active 定义离开的结束状态 */
 	
 	.expand-enter-active, .expand-leave-active {
 		transition: all .3s ease;
 	}
-	/* .expand-enter 定义进入的开始状态 */
-	/* .expand-leave 定义离开的结束状态 */
 	
 	.expand-enter,
 	.expand-leave-active {
 		opacity: 0;
 	}
-	/* 必需 */
 	
 	.zoom-enter-active, .zoom-leave-active {
 		transition: all .2s ease;
 	}
-	/* .expand-enter 定义进入的开始状态 */
-	/* .expand-leave 定义离开的结束状态 */
 	
 	.zoom-enter,
 	.zoom-leave-active {

@@ -6,15 +6,16 @@ import router from './routers'
 import store from './vuex/store'
 import { sync } from 'vuex-router-sync'
 import axios from 'axios'
+require('es6-promise').polyfill();
 import * as filters from './filters'
 
 var config = require('../config')
 
-//element-ui按需加载，避免全部引入导致最终包过大
-// message组件引入
+// element-ui按需加载，避免全部引入导致最终包过大
+// Message组件引入
 import Message from 'element-ui/lib/message'
 Vue.prototype.$message = Message;
-//
+// Notification组件引入
 import Notification from 'element-ui/lib/notification'
 Vue.prototype.$notify = Notification;
 
@@ -23,7 +24,7 @@ Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
 
-//路由跳转之前，判断是否需要验证登录
+// 路由跳转之前，判断是否需要验证登录
 // router.beforeEach((to, from, next) => {
 //   console.log('to----');
 //   console.log(to);
