@@ -64,16 +64,20 @@ export default {
       });
     },
     testMessage: function(){
+      let type = ['info', 'success', 'warning', 'error']
+      let typeInt = parseInt(Math.random()*4)
       this.$message({
-        type: 'success',
-        message:'操作成功'
+        type: type[typeInt],
+        message:'操作提示'
       })
     },
     testNotify: function(){
+      let type = ['info', 'success', 'warning', 'error']
+      let typeInt = parseInt(Math.random()*4)
       this.$notify({
-        title: '成功',
-        message: '这是一条成功的提示消息',
-        type: 'success'
+        title: '标题',
+        message: '这是一条提示消息',
+        type: type[typeInt]
       });
     }
   }
