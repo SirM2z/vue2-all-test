@@ -1,1 +1,8 @@
 @charset 'UTF-8';
+
+/*覆盖animate.css*/
+.animated.fadeIn,
+.animated.bounceOutRight
+{
+  animation-duration: .3s;
+}

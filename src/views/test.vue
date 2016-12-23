@@ -1,16 +1,17 @@
 <template>
   <div class="test">
     <h1>{{ msg }}</h1>
-    <h3><router-link to="/hello">go hello</router-link></h3>
-    <h3><router-link to="/test/test1">go test1</router-link></h3>
-    <h3><router-link to="/test/test2">go test2</router-link></h3>
-    <h2>Very Cool~ Do you like it ?</h2>
+    <router-link to="/hello">前往首页（返回hello页面）</router-link>
+    <h2>--------测试嵌套路由，常用于导航--------</h2>
+    <router-link to="/test/test1">前往test1页面</router-link>
+    <router-link to="/test/test2">前往test2页面</router-link>
+    <h2>--------测试Axios获取github数据，打开控制台看效果哦--------</h2>
     <a @click="searchGithub" style="cursor: pointer;">Click this to test Axios</a>
-    <h3>{{time | formatDate('yyyy年MM月dd日 hh时mm分ss秒')}}</h3>
+    <h2>--------测试 Modal组件（用到vuex控制状态）--------</h2>
     <a @click="showModal" style="cursor: pointer;">Click this to show Modal</a>
-    <h3>test message</h3>
+    <h2>--------测试 ElementUI-Message--------</h2>
     <a @click="testMessage" style="cursor: pointer;">Click this to test message</a>
-    <h3>test notify</h3>
+    <h2>--------测试 ElementUI-Notify--------</h2>
     <a @click="testNotify" style="cursor: pointer;">Click this to test notify</a>
 
     <transition
@@ -101,7 +102,9 @@ li {
 }
 
 a {
+  display: inline-block;
   color: #42b983;
+  padding: 0 10px;
 }
 
 .test-modal{

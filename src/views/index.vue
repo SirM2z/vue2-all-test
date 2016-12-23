@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <h1>{{ msg }}</h1>
-    <router-link to="/test">go test</router-link>
+    <router-link to="/test">前往test页面（测试路由）</router-link>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -18,9 +18,6 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
-    <img id="testimg" style="display:none;" src="../assets/images/logo.png">
-    <canvas id="c1" width="400" height="400" style="border: 1px solid #000;"></canvas>
-    <img :src="testimgsrc" alt="">
   </div>
 </template>
 
@@ -34,21 +31,8 @@ export default {
     }
   },
   mounted: function(){
-    this.testcanvas();
   },
   methods:{
-    testcanvas: function(){
-      var image = document.getElementById('testimg');
-      var canvas = document.getElementById('c1');
-      var ctx = canvas.getContext('2d');
-      ctx.drawImage(image, 0, 0, 200, 200);
-      ctx.drawImage(image, 200, 0, 200, 200);
-      ctx.drawImage(image, 100, 200, 200, 200);
-      ctx.font="20px Georgia";
-      ctx.fillText("测试测试测试测试测试!",100,200);
-
-      this.testimgsrc = canvas.toDataURL("png");  
-    }
   }
 }
 </script>
