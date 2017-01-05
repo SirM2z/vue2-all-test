@@ -1,4 +1,4 @@
-# my-project
+# My-project
 
 > A Vue.js2.0 test project
 >
@@ -8,7 +8,9 @@
 >
 > element-ui 采用按需加载，避免最终打包过大
 
-## example
+## [Demo](http://sirm2z.github.io/vue2.0test/index.html)
+
+## Example
 
 ![example](http://7xs9eo.com1.z0.glb.clouddn.com/Introduction.gif)
 
