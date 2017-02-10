@@ -14,21 +14,21 @@
 import { mapGetters, mapActions } from 'vuex'
 export default {
 	methods: {
-		...mapActions([
-			'hideModal'
-		]),
+		...mapActions({
+      hideModal: 'popup/modal/hideModal'
+    }),
 		prevent: function(e){
-			e.preventDefault();
-			e.stopPropagation();
-			this.hideModal();
+			e.preventDefault()
+			e.stopPropagation()
+			this.hideModal()
 		}
 	},
   computed: {
-    ...mapGetters([
-      'isModalShow'
-    ])
+    ...mapGetters({
+      isModalShow: 'popup/modal/isModalShow'
+    })
   }
-}	
+}
 </script>
 
 <style scoped>
@@ -45,24 +45,24 @@ export default {
 		justify-content: center;
 		align-items: center;
 	}
-	/* .expand-enter 				定义进入的开始状态 
-		 .expand-enter-active 定义进入的结束状态 
-		 .expand-leave 				定义离开的开始状态 
+	/* .expand-enter 				定义进入的开始状态
+		 .expand-enter-active 定义进入的结束状态
+		 .expand-leave 				定义离开的开始状态
 		 .expand-leave-active 定义离开的结束状态 */
-	
+
 	.expand-enter-active, .expand-leave-active {
 		transition: all .3s ease;
 	}
-	
+
 	.expand-enter,
 	.expand-leave-active {
 		opacity: 0;
 	}
-	
+
 	.zoom-enter-active, .zoom-leave-active {
 		transition: all .2s ease;
 	}
-	
+
 	.zoom-enter,
 	.zoom-leave-active {
 		transform: scale(0);

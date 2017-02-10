@@ -48,7 +48,9 @@ export default {
   mounted: function(){
   },
   methods:{
-    ...mapActions(['showModal']),
+    ...mapActions({
+      showModal: 'popup/modal/showModal'
+    }),
     searchGithub: function(){
       this.$http.get('/search/repositories',{
         params: {

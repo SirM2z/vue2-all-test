@@ -2,8 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './routers'
-import store from './vuex/store'
+import router from './router'
+import store from './store'
 import { sync } from 'vuex-router-sync'
 import axios from 'axios'
 // var qs = require('qs'); axios发送的数据不是json格式，若需要json格式，添加此库
@@ -57,7 +57,7 @@ axios.interceptors.request.use(function (config) {
   //   config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
   // }
   // 开启loading动画
-  store.dispatch('showLoading')
+  store.dispatch('popup/loading/showLoading')
   return config;
 }, function (error) {
   // Do something with request error
@@ -68,7 +68,7 @@ axios.interceptors.request.use(function (config) {
 axios.interceptors.response.use(function (response) {
   // Do something with response data
   // 关闭loading动画
-  store.dispatch('hideLoading')
+  store.dispatch('popup/loading/hideLoading')
   return response;
 }, function (error) {
   // Do something with response error
@@ -78,10 +78,12 @@ axios.interceptors.response.use(function (response) {
 axios.defaults.baseURL = (process.env.NODE_ENV !=='production' ? config.dev.httpUrl:config.build.httpUrl);
 Vue.prototype.$http = axios
 
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   store,
   router,
-  render: h => h(App)
+  template: '<App/>',
+  components: { App }
 })

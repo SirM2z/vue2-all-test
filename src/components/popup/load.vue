@@ -12,17 +12,17 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'load',
   methods: {
-    prevent: function(e){
-      e.preventDefault();
-      e.stopPropagation();
+    prevent: function(e) {
+      e.preventDefault()
+      e.stopPropagation()
     }
   },
   computed: {
-    ...mapGetters([
-      'loadContent'
-    ])
+    ...mapGetters({
+      loadContent: 'popup/loading/loadContent'
+    })
   }
-}	
+}
 </script>
 
 <style scoped>
@@ -37,18 +37,18 @@ export default {
     text-align: center;
     background: rgba(255, 255, 255, 0.9);
   }
-  
+
   .loading-css3 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .loading-box .loader {
     position: relative;
     border: 4px solid #ccc;
-    border-right-color: #4099ef;
+    border-right-color: #f07c00;
     border-radius: 50%;
     display: inline-block;
     -webkit-animation: loading 0.6s linear;
@@ -56,7 +56,7 @@ export default {
     animation-iteration-count: infinite;
     z-index: 2;
   }
-  
+
   .loading-box .loader,
   .loading-box .loader:after {
     width: 3em;
@@ -64,7 +64,7 @@ export default {
     margin: 0 auto .125rem auto;
     border-radius: 50%;
   }
-  
+
   @-webkit-keyframes loading {
     0% {
       -webkit-transform: rotate(0deg);
@@ -75,7 +75,7 @@ export default {
       transform: rotate(360deg);
     }
   }
-  
+
   @keyframes loading {
     0% {
       -webkit-transform: rotate(0deg);
