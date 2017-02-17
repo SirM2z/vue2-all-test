@@ -27,6 +27,7 @@ module.exports = {
     port: 8080,
     httpUrl: 'https://api.github.com',
     autoOpenBrowser: true,
+    openBrowserUriHost: 'http://localhost:',
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},

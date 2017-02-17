@@ -30,7 +30,7 @@ export default {
       testimgsrc: ''
     }
   },
-  mounted: function(){
+  mounted() {
   },
   methods:{
   }

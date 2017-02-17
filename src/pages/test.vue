@@ -45,13 +45,13 @@ export default {
       time: '2016-05-05 20:10:10'
     }
   },
-  mounted: function(){
+  mounted() {
   },
   methods:{
     ...mapActions({
       showModal: 'popup/modal/showModal'
     }),
-    searchGithub: function(){
+    searchGithub() {
       this.$http.get('/search/repositories',{
         params: {
           q: 'vscode',
@@ -66,7 +66,7 @@ export default {
         console.log(error);
       });
     },
-    testMessage: function(){
+    testMessage() {
       let type = ['info', 'success', 'warning', 'error']
       let typeInt = parseInt(Math.random()*4)
       this.$message({
@@ -74,7 +74,7 @@ export default {
         message:'操作提示'
       })
     },
-    testNotify: function(){
+    testNotify() {
       let type = ['info', 'success', 'warning', 'error']
       let typeInt = parseInt(Math.random()*4)
       this.$notify({
