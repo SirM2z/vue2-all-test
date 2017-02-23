@@ -1,16 +1,17 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import 'es6-promise/auto'
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
 import { sync } from 'vuex-router-sync'
 import axios from 'axios'
-// var qs = require('qs'); axios发送的数据不是json格式，若需要json格式，添加此库
-require('es6-promise').polyfill();
+// import qs from 'qs' axios发送的数据不是json格式，若需要json格式，添加此库
+
 import * as filters from './filters'
 
-var config = require('../config')
+import config from '../config';
 
 // element-ui按需加载，避免全部引入导致最终包过大，自行加入所需组件
 import {
@@ -40,7 +41,7 @@ Object.keys(filters).forEach(key => {
 
 router.afterEach(route => {
   // console.log(route);
-  document.title = route.name;
+  document.title = route.meta.title
 })
 
 // sync the router with the vuex store.

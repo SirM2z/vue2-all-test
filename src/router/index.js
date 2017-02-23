@@ -9,25 +9,25 @@ export default new Router({
   routes: [
     {
       path: '/hello',
-      title: '你好',
+      meta: { title: '你好' },
       name: 'hello',
       component: (resolve) => require(['../pages/index.vue'], resolve)
     },
     {
       path: '/test',
-      title: '测试页面也很霸气',
+      meta: { title: '测试页面也很霸气' },
       name: 'test',
       component: (resolve) => require(['../pages/test.vue'], resolve),
       children: [
         {
           path: 'test1',
-          title: '测试页面1',
+          meta: { title: '测试页面1' },
           name: 'test1',
           component: (resolve) => require(['../pages/test/test1.vue'], resolve)
         },
         {
           path: 'test2',
-          title: '测试页面2',
+          meta: { title: '测试页面2' },
           name: 'test2',
           component: (resolve) => require(['../pages/test/test2.vue'], resolve)
         }
