@@ -13,6 +13,8 @@ import * as filters from './filters'
 
 import config from '../config';
 
+Vue.config.productionTip = false
+
 // element-ui按需加载，避免全部引入导致最终包过大，自行加入所需组件
 import {
   Select
