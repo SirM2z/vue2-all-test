@@ -55,6 +55,11 @@
     "webpack-hot-middleware": "^2.16.1",
     "webpack-merge": "^2.6.1"
   },
+  "browserlist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
