@@ -4,7 +4,7 @@ import {
 } from '../types'
 
 const state = {
-	show: false
+  show: false
 }
 
 const actions = {
@@ -18,11 +18,11 @@ const actions = {
 
 const mutations = {
   [MODAL_SHOW](state, action) {
-		state.show = true
-	},
-	[MODAL_HIDE](state, action) {
-		state.show = false
-	}
+    state.show = true
+  },
+  [MODAL_HIDE](state, action) {
+    state.show = false
+  }
 }
 
 const getters = {

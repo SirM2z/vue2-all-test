@@ -11,7 +11,7 @@ import axios from 'axios'
 
 import * as filters from './filters'
 
-import config from '../config';
+import config from '../config'
 
 Vue.config.productionTip = false
 
@@ -65,7 +65,7 @@ axios.interceptors.request.use(function (config) {
 }, function (error) {
   // Do something with request error
   return Promise.reject(error);
-});
+})
 
 // Add a response interceptor
 axios.interceptors.response.use(function (response) {
@@ -76,7 +76,7 @@ axios.interceptors.response.use(function (response) {
 }, function (error) {
   // Do something with response error
   return Promise.reject(error);
-});
+})
 
 axios.defaults.baseURL = (process.env.NODE_ENV !=='production' ? config.dev.httpUrl:config.build.httpUrl);
 Vue.prototype.$http = axios
