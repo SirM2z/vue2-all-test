@@ -33,7 +33,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import modal from '../components/popup/modal.vue'
+import modal from '@components/popup/modal.vue'
 export default {
   name: 'test',
   components: {
