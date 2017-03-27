@@ -33,7 +33,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import modal from '@components/popup/modal.vue'
+import modal from '@/components/popup/modal.vue'
 export default {
   name: 'test',
   components: {
@@ -53,11 +53,9 @@ export default {
     }),
     searchGithub() {
       this.$http.get('/search/repositories',{
-        params: {
-          q: 'vscode',
-          sort: 'stars',
-          order: 'desc'
-        }
+        q: 'vscode',
+        sort: 'stars',
+        order: 'desc'
       })
       .then((response) => {
         console.log(response);

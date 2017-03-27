@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h2 class="back"><a href="https://github.com/SirM2z/vue2.0-all-test">Go Back To Repository</a></h2>
-    <img src="~@assets/images/logo.png">
+    <img src="~@/assets/images/logo.png">
     <transition
       name="custom-classes-transition"
       enter-active-class="animated tada"
@@ -16,10 +16,10 @@
 
 <script>
 import 'animate.css'
-import '@assets/style/common.css'
+import '@/assets/style/common.css'
 import 'element-ui/lib/theme-default/message.css'
 import 'element-ui/lib/theme-default/notification.css'
-import load from '@components/popup/load.vue'
+import load from '@/components/popup/load.vue'
 export default {
   name: 'app',
   components: {
