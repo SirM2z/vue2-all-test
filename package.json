@@ -11,7 +11,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "axios": "^0.15.3",
-    "element-ui": "^1.2.3",
+    "element-ui": "^1.2.6",
     "es6-promise": "^4.0.5",
     "qs": "^6.3.0",
     "vue": "^2.2.4",

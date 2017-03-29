@@ -22,7 +22,7 @@ Object.keys(filters).forEach(key => {
 import {
   Select
 } from 'element-ui'
-Vue.component(Select.name, Select)
+Vue.use(Select)
 // Message组件引入
 import Message from 'element-ui/lib/message'
 Vue.prototype.$message = Message
