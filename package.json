@@ -11,12 +11,12 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "axios": "^0.15.3",
-    "element-ui": "^1.2.6",
-    "es6-promise": "^4.0.5",
-    "qs": "^6.3.0",
-    "vue": "^2.2.4",
-    "vue-router": "^2.3.0",
-    "vuex": "^2.1.2",
+    "element-ui": "^1.2.7",
+    "es6-promise": "^4.1.0",
+    "qs": "^6.4.0",
+    "vue": "^2.2.6",
+    "vue-router": "^2.3.1",
+    "vuex": "^2.2.1",
     "vuex-router-sync": "^4.1.2"
   },
   "devDependencies": {
@@ -48,7 +48,7 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^11.1.4",
     "vue-style-loader": "^2.0.0",
-    "vue-template-compiler": "^2.2.4",
+    "vue-template-compiler": "^2.2.6",
     "webpack": "^2.2.1",
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
