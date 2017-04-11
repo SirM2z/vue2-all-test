@@ -12,7 +12,7 @@
 
 ## Example
 
-![example](http://7xs9eo.com1.z0.glb.clouddn.com/Introduction.gif)
+![example](https://raw.githubusercontent.com/SirM2z/assets/master/image/Introduction.gif)
 
 ##
 
