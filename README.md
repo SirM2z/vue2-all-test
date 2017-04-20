@@ -1,8 +1,8 @@
 # My-project
 
-> A Vue.js2.0 test project
+> A Vue.js2.x test project
 >
-> 包括vue2.0,vue-router,vuex,axios,element-ui
+> 包括vue2.x,vue-router,vuex,axios,element-ui
 >
 > vue-router 使用了懒加载、嵌套路由
 >
