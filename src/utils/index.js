@@ -190,3 +190,20 @@ export function timeDown (start, end) {
     }
     return result + tmpS;
 }
+
+/**
+ * 在字符串左侧填充 字符串到  相应长度
+ * @param {*string} str 原始字符串
+ * @param {*number} len 期望长度
+ * @param {*string} ch 填充字符串
+ */
+export function leftpad (str, len, ch) {
+  str = String(str);
+  var i = -1;
+  if (!ch && ch !== 0) ch = ' ';
+  len = len - str.length;
+  while (++i < len) {
+    str = ch + str;
+  }
+  return str;
+}
