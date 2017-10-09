@@ -24,7 +24,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: process.env.PORT || 8080,
     httpUrl: 'https://api.github.com',
     autoOpenBrowser: true,
     openBrowserUriHost: 'http://localhost:',
