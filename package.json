@@ -11,13 +11,13 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "axios": "^0.16.1",
-    "element-ui": "^1.4.6",
+    "element-ui": "^1.4.7",
     "es6-promise": "^4.1.0",
     "qs": "^6.4.0",
-    "vue": "^2.4.2",
-    "vue-router": "^2.7.0",
-    "vuex": "^2.3.1",
-    "vuex-router-sync": "^4.1.2"
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.0",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
@@ -49,9 +49,9 @@
     "shelljs": "^0.7.7",
     "sinon": "4.0.0",
     "url-loader": "^0.5.8",
-    "vue-loader": "^13.0.4",
+    "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.4.2",
+    "vue-template-compiler": "^2.5.2",
     "webpack": "3.6.0",
     "webpack-bundle-analyzer": "2.9.0",
     "webpack-dev-middleware": "1.12.0",
