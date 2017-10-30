@@ -17,8 +17,8 @@
 <script>
 import 'animate.css'
 import '@/assets/style/common.css'
-import 'element-ui/lib/theme-default/message.css'
-import 'element-ui/lib/theme-default/notification.css'
+import 'element-ui/lib/theme-chalk/message.css'
+import 'element-ui/lib/theme-chalk/notification.css'
 import load from '@/components/popup/load.vue'
 export default {
   name: 'app',
